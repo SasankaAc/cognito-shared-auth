@@ -28,7 +28,7 @@ function App() {
     return(
         <React.Fragment>
             <br />
-            <a href="http://localhost:4000/">Navigate to Next App</a> | 
+            <a href={process.env.REACT_APP_NEXT_APP_BASE!}>Navigate to Next App</a> | 
             <button onClick={handleSignOut}>Sign out</button>
 
             <h1>React App Home</h1>
