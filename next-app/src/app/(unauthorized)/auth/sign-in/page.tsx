@@ -4,14 +4,14 @@ import React, { useState } from 'react';
 import { getCurrentUser, signInWithRedirect } from 'aws-amplify/auth';
 import { redirect } from 'next/navigation';
 
-export enum AUTH_STATE {
+enum AUTH_STATE {
     PENDING='pending',
     AUTHENTICATED='authenticated',
     UNAUTHENTICATED='unauthenticated'
 }
 
 export default function SignIn() {
-    const [authState, setAuthState] = useState(AUTH_STATE.PENDING)
+    const [authState, setAuthState] = useState<AUTH_STATE>(AUTH_STATE.PENDING)
 
     React.useEffect(() => {
         getAuthenticatedUser()

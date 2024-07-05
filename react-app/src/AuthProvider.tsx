@@ -4,13 +4,13 @@ import { getCurrentUser, signInWithRedirect } from 'aws-amplify/auth';
 import { cognitoUserPoolsTokenProvider } from 'aws-amplify/auth/cognito';
 import { CookieStorage } from 'aws-amplify/utils';
 
-export enum AUTH_STATE {
+enum AUTH_STATE {
     PENDING='pending',
     AUTHENTICATED='authenticated',
     UNAUTHENTICATED='unauthenticated'
 }
 
-export type AuthUserInfo ={
+type AuthUserInfo ={
     username: string;
     userId: string
 }
