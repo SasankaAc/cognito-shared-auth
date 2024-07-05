@@ -47,7 +47,7 @@ Amplify.configure({
     secure: true,
     domain: process.env.NEXT_PUBLIC_COOKIE_DOMAIN,
     path: '/',
-    sameSite:'lax'
+    // sameSite:'lax'
   }));
 
 export default function AuthClientProvider({
