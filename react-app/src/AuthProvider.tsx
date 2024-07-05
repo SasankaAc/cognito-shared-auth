@@ -42,7 +42,7 @@ Amplify.configure({
   
   cognitoUserPoolsTokenProvider.setKeyValueStorage(new CookieStorage({
     secure: true,
-    domain: 'localhost',
+    domain: process.env.REACT_APP_COOKIE_DOMAIN,
     path: '/',
     sameSite:'lax'
   }));
