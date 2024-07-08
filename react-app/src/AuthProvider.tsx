@@ -63,7 +63,7 @@ const AuthProvider: React.FC<{
       switch(authState) {
         case AUTH_STATE.UNAUTHENTICATED:
           console.log('Unauthenticated')
-          // signInWithRedirect();
+          signInWithRedirect();
           break;
         default:
           console.log('Auth identifier pending...')
@@ -85,7 +85,7 @@ const AuthProvider: React.FC<{
 
     return (
         <React.Fragment>
-            <button onClick={() => signInWithRedirect()}>Sign in</button>           
+            {/* <button onClick={() => signInWithRedirect()}>Sign in</button>            */}
             {authState===AUTH_STATE.AUTHENTICATED && props.children}
            
         </React.Fragment>
