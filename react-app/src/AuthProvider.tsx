@@ -37,14 +37,14 @@ Amplify.configure({
           }
         }
       }
-    }
+    },
   });
   
   cognitoUserPoolsTokenProvider.setKeyValueStorage(new CookieStorage({
-    secure: true,
+    // secure: true,
     domain: process.env.REACT_APP_COOKIE_DOMAIN,
-    path: '/',
-    sameSite: 'none'
+    // path: '/',
+    // sameSite: 'none'
   }));
 
 const AuthProvider: React.FC<{
