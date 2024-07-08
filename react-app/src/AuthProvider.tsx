@@ -62,7 +62,6 @@ const AuthProvider: React.FC<{
     React.useEffect(() => {
       switch(authState) {
         case AUTH_STATE.UNAUTHENTICATED:
-          console.log('Unauthenticated')
           signInWithRedirect();
           break;
         default:
