@@ -44,7 +44,7 @@ Amplify.configure({
     secure: true,
     domain: process.env.REACT_APP_COOKIE_DOMAIN,
     path: '/',
-    sameSite: 'lax'
+    sameSite: 'none'
   }));
 
 const AuthProvider: React.FC<{
@@ -53,7 +53,7 @@ const AuthProvider: React.FC<{
 
     const [authState, setAuthState] = useState(AUTH_STATE.PENDING)
     const [authUser, setAuthUser] = useState<AuthUserInfo | null>(null)
-
+    console.log('REACT_APP_COOKIE_DOMAIN', process.env.REACT_APP_COOKIE_DOMAIN)
 
     React.useEffect(() => {
         getAuthenticatedUser()
