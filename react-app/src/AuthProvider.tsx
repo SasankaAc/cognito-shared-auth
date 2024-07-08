@@ -44,7 +44,7 @@ Amplify.configure({
     secure: true,
     domain: process.env.REACT_APP_COOKIE_DOMAIN,
     path: '/',
-    sameSite: 'none'
+    sameSite: 'lax'
   }));
 
 const AuthProvider: React.FC<{
