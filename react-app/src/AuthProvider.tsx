@@ -44,7 +44,7 @@ Amplify.configure({
     secure: true,
     domain: process.env.REACT_APP_COOKIE_DOMAIN,
     path: '/',
-    sameSite:'none'
+    sameSite: 'none'
   }));
 
 const AuthProvider: React.FC<{
@@ -62,7 +62,8 @@ const AuthProvider: React.FC<{
     React.useEffect(() => {
       switch(authState) {
         case AUTH_STATE.UNAUTHENTICATED:
-          signInWithRedirect();
+          console.log('Unauthenticated')
+          // signInWithRedirect();
           break;
         default:
           console.log('Auth identifier pending...')
@@ -83,7 +84,8 @@ const AuthProvider: React.FC<{
     }
 
     return (
-        <React.Fragment>           
+        <React.Fragment>
+            <button onClick={() => signInWithRedirect()}>Sign in</button>           
             {authState===AUTH_STATE.AUTHENTICATED && props.children}
            
         </React.Fragment>
