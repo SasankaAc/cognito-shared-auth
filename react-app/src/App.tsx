@@ -18,7 +18,7 @@ function App() {
 
     const handleSignOut = async () => {
         try{
-          await signOut()
+          await signOut({global: true})
         } catch(err){
           alert(err)
           console.log('Sign our Error', err)

@@ -7,7 +7,7 @@ import { redirect } from "next/navigation";
 export default function SignOut() {
     const handleSignOut = async () => {
         try{
-          await signOut()          
+          await signOut({global: true})          
         } catch(err){
           console.log('Sign our Error', err)
         }
