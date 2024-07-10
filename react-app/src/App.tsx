@@ -17,21 +17,22 @@ function App() {
     }
 
     const handleSignOut = async () => {
-        try{
-          await signOut({global: true})
-        } catch(err){
-          alert(err)
-          console.log('Sign our Error', err)
-        }
-        
+        setTimeout(async () => {
+            try{
+                await signOut()
+              } catch(err){
+                alert(err)
+                console.log('Sign our Error', err)
+              }
+        })        
       }
     return(
         <React.Fragment>
             <br />
-            <a href={process.env.REACT_APP_NEXT_APP_BASE!}>Navigate to Next App</a> | 
+            <a href={process.env.REACT_APP_NEXT_APP_BASE!}>Navigate to New App</a> | 
             <button onClick={handleSignOut}>Sign out</button>
 
-            <h1>React App Home</h1>
+            <h1>Legacy App Home</h1>
         </React.Fragment>
     )
 }

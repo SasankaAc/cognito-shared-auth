@@ -5,14 +5,16 @@ import { signOut } from 'aws-amplify/auth';
 import { redirect } from "next/navigation";
 
 export default function SignOut() {
-    const handleSignOut = async () => {
+  const handleSignOut = async () => {
+    setTimeout(async () => {
         try{
-          await signOut({global: true})          
-        } catch(err){
-          console.log('Sign our Error', err)
-        }
-        
-      }
+            await signOut()
+          } catch(err){
+            alert(err)
+            console.log('Sign our Error', err)
+          }
+    })        
+  }
 
     return(
         <button onClick={handleSignOut}>Sign Out</button>

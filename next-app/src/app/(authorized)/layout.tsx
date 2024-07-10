@@ -11,7 +11,7 @@ export default function AuthorizedLayout({
   return (
    <React.Fragment>
     <div>
-        <Link href={process.env.NEXT_PUBLIC_REACT_APP_BASE!}>Navigate to React app</Link> |
+        <Link href={process.env.NEXT_PUBLIC_REACT_APP_BASE!}>Navigate to Legacy app</Link> |
         <Link href="/">Home</Link> |
         <Link href="/ssr">SSR Page</Link> |
         <Link href="/csr">CSR Page</Link> |
